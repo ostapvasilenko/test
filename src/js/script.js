@@ -7,4 +7,7 @@ let slider = $(document).ready(function () {
     infinite: true
   });
 });
-
+$('.header__burger').click(function(){
+  $('.header__burger').toggleClass('active')
+  $('.mobile').toggleClass('active')
+})

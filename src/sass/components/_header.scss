@@ -25,6 +25,7 @@
 
     &__burger {
         position: relative;
+        cursor: pointer;
 
         span {
             height: 3px;
@@ -36,31 +37,64 @@
             position: absolute;
             top: 0;
             left: 0;
+            transition: 0.5s;
         }
 
         :last-child {
             position: absolute;
             bottom: 0;
             left: 0;
+            transition: 0.5s;
         }
 
         :nth-child(2) {
             position: absolute;
             left: 0;
             top: calc(50% - 1.5px);
+            transition: 0.5s;
         }
-        &.active{
-            :first-child{
+
+        &.active {
+            :first-child {
                 transform: rotate(45deg);
                 top: 43%;
             }
-            :last-child{
+
+            :last-child {
                 transform: rotate(-45deg);
                 bottom: 39%;
             }
-            :nth-child(2){
+
+            :nth-child(2) {
                 display: none;
             }
         }
     }
+}
+.mobile{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color: aqua;
+    
+    &__nav{
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                margin: 15px;
+                a{
+                  text-decoration: none;
+                  color: yellow;
+                }
+            }
+        }
+    }
+
 }
