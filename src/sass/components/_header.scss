@@ -49,5 +49,18 @@
             left: 0;
             top: calc(50% - 1.5px);
         }
+        &.active{
+            :first-child{
+                transform: rotate(45deg);
+                top: 43%;
+            }
+            :last-child{
+                transform: rotate(-45deg);
+                bottom: 39%;
+            }
+            :nth-child(2){
+                display: none;
+            }
+        }
     }
 }
