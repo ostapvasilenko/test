@@ -1,8 +1,53 @@
-.header{
-    background-color: red;
+.header {
+    background-color: rgb(218, 124, 124);
     color: #fff;
-    &__title{
-        color: aqua;
-        font-size: 40px;
+    height: 100px;
+
+
+    &__nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    margin: 20px;
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &__burger {
+        position: relative;
+
+        span {
+            height: 3px;
+            width: 30px;
+            background-color: #fff;
+        }
+
+        :first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        :last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        :nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1.5px);
+        }
     }
 }
